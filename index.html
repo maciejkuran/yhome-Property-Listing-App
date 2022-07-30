@@ -6,7 +6,271 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script defer src="/main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/pig0nkd.css" />
     <link rel="stylesheet" href="/css/main.css" />
   </head>
-  <body></body>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-wrapper">
+        <a href="/"><img src="/img/yhome logo.png" alt="yhome logo" /></a>
+        <div class="nav-buttons">
+          <button class="my-favorites-btn"><i class="ri-heart-3-line"></i></button>
+          <button class="login-btn"><i class="ri-user-fill"></i></button>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <!-- ////////////////////////
+      HEADER WITH FILTERS -->
+      <header class="home-header">
+        <div class="home-header-int-wrapper">
+          <h1>Home is Where Your <span class="highlight">Heart</span> Beats</h1>
+          <div class="forms-wrapper">
+            <form>
+              <input class="input-country input" placeholder="Country" type="text" />
+              <i class="ri-arrow-down-s-line no-pointer-event"></i>
+              <div class="options-container options-countries hide">
+                <button class="country-option option">Poland</button>
+                <button class="country-option option">Germany</button>
+              </div>
+            </form>
+
+            <form>
+              <input class="input-city input" placeholder="City" type="text" />
+              <i class="ri-arrow-down-s-line no-pointer-event"></i>
+              <div class="options-container options-cities hide">
+                <button class="country-option option">Poland</button>
+                <button class="country-option option">Germany</button>
+              </div>
+            </form>
+
+            <form>
+              <input class="input-type input" placeholder="Type" type="text" />
+              <i class="ri-arrow-down-s-line no-pointer-event"></i>
+              <div class="options-container options-types hide">
+                <button class="country-option option">Poland</button>
+                <button class="country-option option">Germany</button>
+              </div>
+            </form>
+
+            <form>
+              <input class="input-status input" placeholder="Status" type="text" />
+              <i class="ri-arrow-down-s-line no-pointer-event"></i>
+              <div class="options-container options-statuses hide">
+                <button class="country-option option">Poland</button>
+                <button class="country-option option">Germany</button>
+              </div>
+            </form>
+            <div class="reset">
+              <button class="reset-btn"><i class="ri-close-circle-line"></i>Reset</button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- /////////////////
+      PROPERTIES -->
+      <section class="section-divider properties-container">
+        <a class="login-before-view-btn" href="">
+          <div class="property">
+            <picture class="property-img">
+              <img src="./img/lisbon-apartment.jpg" alt="" />
+              <p class="status-label">For Sale</p>
+            </picture>
+            <div class="price">
+              <p class="price-label"><i class="ri-price-tag-3-line"></i>240.000 €</p>
+            </div>
+            <div class="property-data">
+              <ul>
+                <li class="country-label">
+                  <i class="ri-map-pin-2-line"></i>Spain,<span class="city-label"> Barcelona</span>
+                </li>
+                <li class="type-label"><i class="ri-home-line"></i>Condo</li>
+                <li class="living-area-label"><i class="ri-bookmark-line"></i>125 m2</li>
+              </ul>
+            </div>
+            <div class="action-buttons">
+              <button class="contact-agent-btn"><i class="ri-contacts-line"></i></button>
+              <button class="add-to-favorites-btn"><i class="ri-heart-3-line"></i></button>
+            </div>
+          </div>
+        </a>
+
+        <a class="login-before-view-btn" href="">
+          <div class="property">
+            <picture class="property-img">
+              <img src="./img/lisbon-apartment.jpg" alt="" />
+              <p class="status-label">For Sale</p>
+            </picture>
+            <div class="price">
+              <p class="price-label"><i class="ri-price-tag-3-line"></i>240.000 €</p>
+            </div>
+            <div class="property-data">
+              <ul>
+                <li class="country-label">
+                  <i class="ri-map-pin-2-line"></i>Spain,<span class="city-label"> Barcelona</span>
+                </li>
+                <li class="type-label"><i class="ri-home-line"></i>Condo</li>
+                <li class="living-area-label"><i class="ri-bookmark-line"></i>125 m2</li>
+              </ul>
+            </div>
+            <div class="action-buttons">
+              <button class="contact-agent-btn"><i class="ri-contacts-line"></i></button>
+              <button class="add-to-favorites-btn"><i class="ri-heart-3-line"></i></button>
+            </div>
+          </div>
+        </a>
+
+        <a class="login-before-view-btn" href="">
+          <div class="property">
+            <picture class="property-img">
+              <img src="./img/lisbon-apartment.jpg" alt="" />
+              <p class="status-label">For Sale</p>
+            </picture>
+            <div class="price">
+              <p class="price-label"><i class="ri-price-tag-3-line"></i>240.000 €</p>
+            </div>
+            <div class="property-data">
+              <ul>
+                <li class="country-label">
+                  <i class="ri-map-pin-2-line"></i>Spain,<span class="city-label"> Barcelona</span>
+                </li>
+                <li class="type-label"><i class="ri-home-line"></i>Condo</li>
+                <li class="living-area-label"><i class="ri-bookmark-line"></i>125 m2</li>
+              </ul>
+            </div>
+            <div class="action-buttons">
+              <button class="contact-agent-btn"><i class="ri-contacts-line"></i></button>
+              <button class="add-to-favorites-btn"><i class="ri-heart-3-line"></i></button>
+            </div>
+          </div>
+        </a>
+
+        <a class="login-before-view-btn" href="">
+          <div class="property">
+            <picture class="property-img">
+              <img src="./img/madrid-apartment.jpg" alt="" />
+              <p class="status-label">For Sale</p>
+            </picture>
+            <div class="price">
+              <p class="price-label"><i class="ri-price-tag-3-line"></i>240.000 €</p>
+            </div>
+            <div class="property-data">
+              <ul>
+                <li class="country-label">
+                  <i class="ri-map-pin-2-line"></i>Spain,<span class="city-label"> Barcelona</span>
+                </li>
+                <li class="type-label"><i class="ri-home-line"></i>Condo</li>
+                <li class="living-area-label"><i class="ri-bookmark-line"></i>125 m2</li>
+              </ul>
+            </div>
+            <div class="action-buttons">
+              <button class="contact-agent-btn"><i class="ri-contacts-line"></i></button>
+              <button class="add-to-favorites-btn"><i class="ri-heart-3-line"></i></button>
+            </div>
+          </div>
+        </a>
+      </section>
+      <!-- /////////////////
+      FOOTER -->
+      <footer class="footer">
+        <div class="footer-content">
+          <picture><img src="./img/yhome logo.png" alt="yhome logo" /></picture>
+          <p>
+            Demo Version,
+            <a target="_blank" href="https://maciejkuran.com"> Copyright © maciejkuran.com</a>. All
+            Rights Reserved
+          </p>
+        </div>
+      </footer>
+    </div>
+    <!-- /////////////////////
+      LOGIN FORM -->
+    <div class="login-register-form-container login-container hide">
+      <div class="login-register-form-wrapper">
+        <div class="login-form">
+          <h2>Log in</h2>
+          <form class="input-fields">
+            <input placeholder="Email" class="login-register-input" type="email" />
+            <input
+              autocomplete="on"
+              placeholder="Password"
+              class="login-register-input"
+              type="password"
+              required
+            />
+            <div class="checkbox">
+              <input type="checkbox" name="remember-me" id="remember-me" /><span>Remember me</span>
+            </div>
+          </form>
+          <button class="login-register-button" type="submit">Log In</button>
+          <div class="forgot-password">
+            <a href="#"><button class="forgot-password-btn">Forgot password?</button></a>
+          </div>
+        </div>
+        <picture>
+          <img src="/img/login image.jpg" alt="" />
+        </picture>
+      </div>
+      <div class="register-label">
+        <p>
+          <i class="ri-information-line"></i>Don't have account?
+          <a class="register-now-btn" href=""><span class="highlight">Register now.</span></a>
+        </p>
+      </div>
+      <p class="demo-info-label">It's a demo version. Do not login or register.</p>
+      <button class="close-popup"><i class="ri-close-circle-line"></i></button>
+    </div>
+    <!-- /////////////////////
+      REGISTER FORM -->
+    <div class="login-register-form-container register-container hide">
+      <div class="login-register-form-wrapper">
+        <form class="login-form">
+          <h2>Register</h2>
+          <div class="input-fields">
+            <input placeholder="Name" class="login-register-input" type="text" />
+            <input placeholder="Email" class="login-register-input" type="email" />
+            <input
+              autocomplete="on"
+              placeholder="Password"
+              class="login-register-input"
+              type="password"
+              required
+            />
+            <input
+              autocomplete="on"
+              placeholder="Confirm password"
+              class="login-register-input"
+              type="password"
+              required
+            />
+            <div class="checkbox">
+              <input type="checkbox" name="accept-terms" id="accept-terms" /><span
+                >Agree with Terms & Conditions</span
+              >
+            </div>
+          </div>
+          <button class="login-register-button" type="submit">Register</button>
+        </form>
+        <picture>
+          <img src="/img/login image.jpg" alt="" />
+        </picture>
+      </div>
+
+      <p class="demo-info-label">It's a demo version. Do not login or register.</p>
+      <button class="close-popup"><i class="ri-close-circle-line"></i></button>
+    </div>
+    <!-- /////////////////// -->
+    <!-- BACKGROUND OVERLAY MODAL  -->
+    <div class="background-overlay hide"></div>
+  </body>
 </html>

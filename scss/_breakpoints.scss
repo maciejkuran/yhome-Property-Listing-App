@@ -1,0 +1,184 @@
+@media (max-width: 1089.98px) {
+  .navbar-wrapper {
+    img {
+      max-width: 14rem;
+    }
+  }
+
+  .property-img {
+    img {
+      height: 16rem;
+    }
+  }
+
+  .status-label {
+    bottom: 13rem;
+  }
+
+  .properties-container {
+    gap: 1rem;
+  }
+
+  .price {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 995.98px) {
+  .property-img {
+    img {
+      height: 18rem;
+    }
+  }
+
+  .status-label {
+    bottom: 15rem;
+  }
+
+  .properties-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800.98px) {
+  h1,
+  h2,
+  h3 {
+    font-size: 2.5rem;
+  }
+
+  li,
+  p,
+  .input {
+    font-size: 1.6rem;
+  }
+
+  .status-label {
+    font-size: 1.4rem;
+  }
+
+  .navbar-wrapper {
+    button {
+      font-size: 2.5rem;
+    }
+  }
+
+  .action-buttons {
+    button {
+      font-size: 2rem;
+    }
+  }
+
+  .forms-wrapper {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 687.98px) {
+  .navbar-wrapper {
+    img {
+      max-width: 12rem;
+    }
+  }
+
+  .property-img {
+    img {
+      height: 14rem;
+    }
+  }
+
+  .status-label {
+    bottom: 11.5rem;
+    font-size: 1.2rem;
+  }
+
+  .login-register-form-wrapper img {
+    display: none;
+  }
+
+  .login-form {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 636.98px) {
+  .properties-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 2.5rem;
+  }
+
+  .property-img {
+    img {
+      height: 15rem;
+    }
+  }
+
+  .status-label {
+    bottom: 12.5rem;
+  }
+
+  .footer {
+    p {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 431.98px) {
+  h1,
+  h2,
+  h3 {
+    font-size: 2rem;
+  }
+
+  li,
+  p {
+    font-size: 1.4rem;
+  }
+
+  .input {
+    font-size: 1.2rem;
+    max-width: 9rem;
+  }
+
+  .option {
+    font-size: 1.2rem;
+    padding: 0.7rem;
+  }
+
+  .ri-arrow-down-s-line:before {
+    transform: translate(-3rem, 1.6rem);
+  }
+}
+
+@media (max-width: 378.98px) {
+  .property-img {
+    img {
+      height: 12rem;
+    }
+  }
+
+  .status-label {
+    bottom: 9.5rem;
+  }
+
+  .property-data {
+    li {
+      font-size: 1.2rem;
+    }
+  }
+
+  .input-fields input {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 353.98px) {
+  .login-register-form-container {
+    min-width: 95%;
+  }
+  .login-form {
+    min-width: 95%;
+  }
+}

@@ -1,0 +1,75 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-light-grey: #fcfcfc;
+  --color-middle-grey: #f6f6f6;
+  --color-dark-grey: #858585;
+  --color-black: black;
+  --color-white: white;
+  --color-red: #e60d60;
+  --color-red-hover: #b20547;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Comfortaa", cursive;
+  background-color: var(--color-middle-grey);
+}
+
+body {
+  position: relative;
+}
+
+button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: soleil, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+p {
+  font-size: 1.8rem;
+  font-family: soleil, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+input {
+  font-family: soleil, sans-serif;
+  outline: none;
+  border: none;
+  font-size: 1.8rem;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-family: soleil, sans-serif;
+}
+
+input[type="checkbox"] {
+  accent-color: var(--color-red);
+}
