@@ -117,6 +117,7 @@ input[type=checkbox] {
   max-width: 150rem;
   margin: auto;
   padding: 1rem;
+  min-height: 100vh;
 }
 
 .home-header {
@@ -316,6 +317,10 @@ input[type=checkbox] {
 }
 
 .footer {
+  position: absolute;
+  bottom: 0;
+  min-width: 100%;
+  padding: 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -457,12 +462,6 @@ input[type=checkbox] {
 
 .highlight {
   color: var(--color-red);
-}
-
-.highlight:hover {
-  color: var(--color-red-hover);
-  -webkit-transition: 500ms;
-  transition: 500ms;
 }
 
 .hide {
