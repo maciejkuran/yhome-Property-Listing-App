@@ -3,6 +3,8 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 5;
+  background-color: #f6f6f6de;
 }
 
 .navbar-wrapper {
@@ -82,7 +84,7 @@
 }
 
 .ri-arrow-down-s-line:before {
-  content: "\ea4e";
+  content: '\ea4e';
   position: absolute;
   transform: translate(-4rem, 2rem);
   font-size: 1.5rem;
@@ -93,12 +95,17 @@
 }
 
 .options-container {
-  position: fixed;
+  display: none;
+  border: 2px solid var(--color-white);
+  position: absolute;
   min-width: 11rem;
-  display: flex;
   flex-direction: column;
   margin: 0;
   z-index: 2;
+}
+
+.options-container-active {
+  display: flex;
 }
 
 .option {
@@ -167,6 +174,10 @@
   color: var(--color-red);
 }
 
+.price-label {
+  font-weight: 600;
+}
+
 .property-data {
   i {
     margin-right: 0.5rem;
@@ -174,7 +185,7 @@
 }
 
 .country-label {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .action-buttons {
@@ -194,14 +205,14 @@
 }
 
 .status-label {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   padding: 0.5rem;
   background-color: var(--color-red);
   color: var(--color-white);
   max-width: 7rem;
   border-radius: 15px;
   position: absolute;
-  bottom: 19rem;
+  bottom: 19.1rem;
 }
 
 .footer {
@@ -229,7 +240,7 @@
 }
 
 .login-register-form-container {
-  z-index: 2;
+  z-index: 6;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -337,11 +348,17 @@
   margin-bottom: 8rem;
 }
 
-.background-overlay {
+.dark-background-overlay {
   position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.636);
+  z-index: 5;
+}
+
+.transparent-background-overlay {
+  @extend .dark-background-overlay;
+  background-color: rgba(255, 255, 255, 0);
 }

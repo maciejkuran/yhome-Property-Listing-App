@@ -32,7 +32,7 @@ button {
   border: none;
   background: none;
   cursor: pointer;
-  font-family: soleil, sans-serif;
+  font-family: "Mulish", sans-serif;
 }
 
 h1,
@@ -44,7 +44,7 @@ h3 {
 
 p {
   font-size: 1.8rem;
-  font-family: soleil, sans-serif;
+  font-family: "Mulish", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -55,7 +55,7 @@ a {
 }
 
 input {
-  font-family: soleil, sans-serif;
+  font-family: "Mulish", sans-serif;
   outline: none;
   border: none;
   font-size: 1.8rem;
@@ -68,7 +68,7 @@ ul {
 li {
   font-size: 1.8rem;
   margin-bottom: 1rem;
-  font-family: soleil, sans-serif;
+  font-family: "Mulish", sans-serif;
 }
 
 input[type=checkbox] {
@@ -80,6 +80,8 @@ input[type=checkbox] {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 5;
+  background-color: rgba(246, 246, 246, 0.8705882353);
 }
 
 .navbar-wrapper {
@@ -187,17 +189,22 @@ input[type=checkbox] {
 }
 
 .options-container {
-  position: fixed;
+  display: none;
+  border: 2px solid var(--color-white);
+  position: absolute;
   min-width: 11rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 0;
   z-index: 2;
+}
+
+.options-container-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .option {
@@ -278,12 +285,16 @@ input[type=checkbox] {
   color: var(--color-red);
 }
 
+.price-label {
+  font-weight: 600;
+}
+
 .property-data i {
   margin-right: 0.5rem;
 }
 
 .country-label {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .action-buttons {
@@ -306,14 +317,14 @@ input[type=checkbox] {
 }
 
 .status-label {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   padding: 0.5rem;
   background-color: var(--color-red);
   color: var(--color-white);
   max-width: 7rem;
   border-radius: 15px;
   position: absolute;
-  bottom: 19rem;
+  bottom: 19.1rem;
 }
 
 .footer {
@@ -351,7 +362,7 @@ input[type=checkbox] {
 }
 
 .login-register-form-container {
-  z-index: 2;
+  z-index: 6;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -472,13 +483,18 @@ input[type=checkbox] {
   margin-bottom: 8rem;
 }
 
-.background-overlay {
+.dark-background-overlay, .transparent-background-overlay {
   position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.636);
+  z-index: 5;
+}
+
+.transparent-background-overlay {
+  background-color: rgba(255, 255, 255, 0);
 }
 
 @media (max-width: 1089.98px) {
@@ -581,6 +597,9 @@ p {
   .input {
     font-size: 1.2rem;
     max-width: 9rem;
+  }
+  .reset-btn {
+    font-size: 1.2rem;
   }
   .option {
     font-size: 1.2rem;
