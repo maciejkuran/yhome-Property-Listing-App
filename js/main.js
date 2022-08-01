@@ -46,10 +46,6 @@ displayProperties();
 /////FILTERING RESULTS
 
 //Retreiving programatically unique label values from DOM and saving in arrays
-const countryLabel = document.querySelectorAll('.country-label');
-const cityLabel = document.querySelectorAll('.city-label');
-const typeLabel = document.querySelectorAll('.type-label');
-const statusLabel = document.querySelectorAll('.status-label');
 
 const uniqueValues = labels => {
   const arr = [];
@@ -60,12 +56,10 @@ const uniqueValues = labels => {
 };
 
 //Removing unnecessary characters from each string
-let countriesArr = uniqueValues(countryLabel).map(country =>
-  country.replaceAll(',', '').trim()
-);
-let citiesArr = uniqueValues(cityLabel).map(city => city.trim());
-let typesArr = uniqueValues(typeLabel);
-let statusesArr = uniqueValues(statusLabel);
+let countriesArr = [];
+let citiesArr = [];
+let typesArr = [];
+let statusesArr = [];
 
 //Filling filter options with the unique values
 const createOptions = (wrapperClass, arr, elClass, attributeName) => {
@@ -82,6 +76,18 @@ const createOptions = (wrapperClass, arr, elClass, attributeName) => {
 
 //Creating all options in DOM
 const initOptions = () => {
+  const countryLabel = document.querySelectorAll('.country-label');
+  const cityLabel = document.querySelectorAll('.city-label');
+  const typeLabel = document.querySelectorAll('.type-label');
+  const statusLabel = document.querySelectorAll('.status-label');
+
+  countriesArr = uniqueValues(countryLabel).map(country =>
+    country.replaceAll(',', '').trim()
+  );
+  citiesArr = uniqueValues(cityLabel).map(city => city.trim());
+  typesArr = uniqueValues(typeLabel);
+  statusesArr = uniqueValues(statusLabel);
+
   createOptions('countries', countriesArr, 'country', 'country');
   createOptions('cities', citiesArr, 'city', 'city');
   createOptions('types', typesArr, 'type', 'type');
@@ -123,6 +129,7 @@ document.querySelector('body').addEventListener('click', removeActiveClass);
 //Selecting and setting option from dropdown
 optionsContainer.forEach(container => {
   container.addEventListener('click', e => {
+    removeAllOptions();
     e.preventDefault();
     let target;
     let targetAttribute;
@@ -135,8 +142,8 @@ optionsContainer.forEach(container => {
       targetAttribute = e.target.getAttribute('name');
       inputField = document.querySelector(`.input[name="${targetAttribute}"]`);
       inputField.value = target.textContent;
-
       filterResults(inputField.value);
+      removeActiveClass();
     }
   });
 });
@@ -150,8 +157,16 @@ const filterResults = input => {
       prop.style.display = '';
     } else {
       prop.remove();
-      //FIXME: W tym miejscu powinny aktualizować się arrays!!!
-      console.log(countriesArr);
     }
   });
+  initOptions();
+  console.log(countriesArr);
+  console.log(citiesArr);
+  console.log(typesArr);
+  console.log(statusesArr);
+};
+
+const removeAllOptions = () => {
+  const options = document.querySelectorAll('.option');
+  options.forEach(option => option.remove());
 };
