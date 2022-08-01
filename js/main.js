@@ -50,9 +50,6 @@ const countryLabel = document.querySelectorAll('.country-label');
 const cityLabel = document.querySelectorAll('.city-label');
 const typeLabel = document.querySelectorAll('.type-label');
 const statusLabel = document.querySelectorAll('.status-label');
-console.log(
-  countryLabel[0].textContent.replaceAll(',', '').replaceAll(' ', '')
-);
 
 const uniqueValues = labels => {
   const arr = [];
@@ -139,8 +136,7 @@ optionsContainer.forEach(container => {
       inputField = document.querySelector(`.input[name="${targetAttribute}"]`);
       inputField.value = target.textContent;
 
-      initFiltering(inputField.value);
-      console.log(inputField.value);
+      filterResults(inputField.value);
     }
   });
 });
@@ -154,10 +150,8 @@ const filterResults = input => {
       prop.style.display = '';
     } else {
       prop.remove();
+      //FIXME: W tym miejscu powinny aktualizować się arrays!!!
+      console.log(countriesArr);
     }
   });
-};
-
-const initFiltering = target => {
-  filterResults(target);
 };
