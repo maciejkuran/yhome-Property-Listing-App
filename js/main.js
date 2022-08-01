@@ -184,5 +184,3 @@ resetBtn.addEventListener('click', () => {
   initOptions();
   inputs.forEach(input => (input.value = ''));
 });
-
-//FIXME: Tworzy się duplikat nieruchomości po kliknięciu w Reset Btn. NAPRAWIĆ !!!
