@@ -101,8 +101,7 @@ formsWrapper.addEventListener('click', e => {
   }
 });
 
-//Removing all active classes on header container click
-const homeHeader = document.querySelector('.home-header');
+//Removing all active classes on <body> click
 const optionsContainer = document.querySelectorAll('.options-container');
 
 const removeActiveClass = () => {
@@ -111,7 +110,7 @@ const removeActiveClass = () => {
   });
 };
 
-homeHeader.addEventListener('click', removeActiveClass);
+document.querySelector('body').addEventListener('click', removeActiveClass);
 
 //Removing class active from all elements
 // const optionsContainer = document.querySelectorAll('.options-container');
