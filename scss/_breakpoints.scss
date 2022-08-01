@@ -72,6 +72,11 @@
   .forms-wrapper {
     flex-wrap: wrap;
   }
+
+  .country-and-city-labels span,
+  .map-pin-icon {
+    font-size: 1.6rem;
+  }
 }
 
 @media (max-width: 687.98px) {
@@ -158,6 +163,11 @@
   .ri-arrow-down-s-line:before {
     transform: translate(-3rem, 1.6rem);
   }
+
+  .country-and-city-labels span,
+  .map-pin-icon {
+    font-size: 1.4rem;
+  }
 }
 
 @media (max-width: 378.98px) {
@@ -171,14 +181,17 @@
     bottom: 9.5rem;
   }
 
-  .property-data {
-    li {
-      font-size: 1.2rem;
-    }
+  li {
+    font-size: 1.2rem;
   }
 
   .input-fields input {
     font-size: 1.5rem;
+  }
+
+  .country-and-city-labels span,
+  .map-pin-icon {
+    font-size: 1.2rem;
   }
 }
 

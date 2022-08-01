@@ -20,15 +20,17 @@ const displayProperties = () => {
     <p class="price-label"><i class="ri-price-tag-3-line"></i>${property.displayPrice()}</p>
   </div>
   <div class="property-data">
-    <ul>
-      <li class="country-label">
-        <i class="ri-map-pin-2-line"></i>${
-          property.country
-        },<span class="city-label"> ${property.city}</span>
-      </li>
-      <li class="type-label"><i class="ri-home-line"></i>${property.type}</li>
-      <li class="living-area-label"><i class="ri-bookmark-line"></i>${property.displayLivingArea()}²</li>
-    </ul>
+  <ul>
+  <li class="country-and-city-labels">
+    <i class="ri-map-pin-2-line map-pin-icon"></i>
+    <span class="country-label">${property.country}, </span>
+    <span class="city-label"> ${property.city}</span>
+  </li>
+  <li class="type-label"><i class="ri-home-line"></i>${property.type}</li>
+  <li class="living-area-label">
+    <i class="ri-bookmark-line"></i>${property.displayLivingArea()}²
+  </li>
+</ul>
   </div>
   <div class="action-buttons">
     <button class="contact-agent-btn"><i class="ri-contacts-line"></i></button>
@@ -43,19 +45,30 @@ displayProperties();
 
 /////FILTERING RESULTS
 
-//Retreiving unique property values and saving in arrays
-const uniqueValues = objectKey => {
+//Retreiving programatically unique label values from DOM and saving in arrays
+const countryLabel = document.querySelectorAll('.country-label');
+const cityLabel = document.querySelectorAll('.city-label');
+const typeLabel = document.querySelectorAll('.type-label');
+const statusLabel = document.querySelectorAll('.status-label');
+console.log(
+  countryLabel[0].textContent.replaceAll(',', '').replaceAll(' ', '')
+);
+
+const uniqueValues = labels => {
   const arr = [];
-  for (const property of allProperties) {
-    arr.push(property[`${objectKey}`]);
+  for (const label of labels) {
+    arr.push(label.textContent);
   }
   return [...new Set(arr)];
 };
 
-const countriesArr = uniqueValues('country');
-const citiesArr = uniqueValues('city');
-const typesArr = uniqueValues('type');
-const statusesArr = uniqueValues('status');
+//Removing unnecessary characters from each string
+let countriesArr = uniqueValues(countryLabel).map(country =>
+  country.replaceAll(',', '').trim()
+);
+let citiesArr = uniqueValues(cityLabel).map(city => city.trim());
+let typesArr = uniqueValues(typeLabel);
+let statusesArr = uniqueValues(statusLabel);
 
 //Filling filter options with the unique values
 const createOptions = (wrapperClass, arr, elClass, attributeName) => {
@@ -134,16 +147,12 @@ optionsContainer.forEach(container => {
 
 //Filtering in DOM and displaying results
 const filterResults = input => {
-  // const labels = document.querySelectorAll(`.${labelName}-label`);
   const propertiesDOM = document.querySelectorAll('.open-property-page-btn');
-
-  // let input = document.querySelector(`.input[name="${labelName}`);
 
   propertiesDOM.forEach(prop => {
     if (prop.innerText.indexOf(input) !== -1) {
       prop.style.display = '';
     } else {
-      // prop.style.display = 'none';
       prop.remove();
     }
   });

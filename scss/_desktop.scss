@@ -186,6 +186,8 @@
 
 .country-label {
   font-weight: 700;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 .action-buttons {
@@ -332,6 +334,15 @@
 .close-popup:hover {
   color: var(--color-red);
   transition: 500ms;
+}
+
+.country-and-city-labels {
+  font-size: 0;
+}
+
+.country-and-city-labels span,
+.map-pin-icon {
+  font-size: 1.8rem;
 }
 
 //////////////////////////
