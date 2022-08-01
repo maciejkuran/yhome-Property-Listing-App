@@ -124,7 +124,7 @@ input[type=checkbox] {
 
 .home-header {
   margin-top: 8rem;
-  padding-bottom: 5rem;
+  margin-bottom: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -580,7 +580,7 @@ p,
     text-align: center;
   }
   .home-header {
-    padding-bottom: 1rem;
+    margin-bottom: 1rem;
   }
 }
 @media (max-width: 431.98px) {

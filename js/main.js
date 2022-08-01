@@ -58,32 +58,30 @@ const typesArr = uniqueValues('type');
 const statusesArr = uniqueValues('status');
 
 //Filling filter options with the unique values
-const createOptions = (wrapperClass, arr, elClass) => {
+const createOptions = (wrapperClass, arr, elClass, attributeName) => {
   const wrapper = document.querySelector(`.options-${wrapperClass}`);
 
   arr.forEach(el => {
     const btn = document.createElement('button');
     btn.className = `${elClass}-option option`;
     btn.textContent = el;
+    btn.setAttribute('name', attributeName);
     wrapper.append(btn);
   });
 };
 
 //Creating all options in DOM
 const initOptions = () => {
-  createOptions('countries', countriesArr, 'country');
-  createOptions('cities', citiesArr, 'city');
-  createOptions('types', typesArr, 'type');
-  createOptions('statuses', statusesArr, 'status');
+  createOptions('countries', countriesArr, 'country', 'country');
+  createOptions('cities', citiesArr, 'city', 'city');
+  createOptions('types', typesArr, 'type', 'type');
+  createOptions('statuses', statusesArr, 'status', 'status');
 };
 
 initOptions();
 
 //Toggling options container on input click
 const formsWrapper = document.querySelector('.forms-wrapper');
-const transparentOverlay = document.querySelector(
-  '.transparent-background-overlay'
-);
 
 formsWrapper.addEventListener('click', e => {
   e.stopPropagation();
@@ -111,6 +109,24 @@ const removeActiveClass = () => {
 };
 
 document.querySelector('body').addEventListener('click', removeActiveClass);
+
+//Selecting option from dropdown
+optionsContainer.forEach(container => {
+  container.addEventListener('click', e => {
+    e.preventDefault();
+    let target;
+    let targetAttribute;
+    let inputField;
+
+    if (e.target.classList.contains('option')) {
+      target = e.target;
+      console.log(target);
+      targetAttribute = e.target.getAttribute('name');
+      inputField = document.querySelector(`.input[name="${targetAttribute}"]`);
+      inputField.value = target.textContent;
+    }
+  });
+});
 
 //Removing class active from all elements
 // const optionsContainer = document.querySelectorAll('.options-container');
