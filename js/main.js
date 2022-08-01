@@ -125,32 +125,30 @@ optionsContainer.forEach(container => {
       targetAttribute = e.target.getAttribute('name');
       inputField = document.querySelector(`.input[name="${targetAttribute}"]`);
       inputField.value = target.textContent;
-      console.log(targetAttribute);
-      initFiltering(targetAttribute);
+
+      initFiltering(inputField.value);
+      console.log(inputField.value);
     }
   });
 });
 
 //Filtering in DOM and displaying results
-const filterResults = labelName => {
+const filterResults = input => {
   // const labels = document.querySelectorAll(`.${labelName}-label`);
   const propertiesDOM = document.querySelectorAll('.open-property-page-btn');
 
-  let input = document.querySelector(`.input[name="${labelName}`);
+  // let input = document.querySelector(`.input[name="${labelName}`);
 
   propertiesDOM.forEach(prop => {
-    console.log(prop.innerText);
-    if (prop.innerText.indexOf(input.value) !== -1) {
+    if (prop.innerText.indexOf(input) !== -1) {
       prop.style.display = '';
     } else {
-      prop.style.display = 'none';
+      // prop.style.display = 'none';
+      prop.remove();
     }
   });
 };
 
 const initFiltering = target => {
-  filterResults(target);
-  filterResults(target);
-  filterResults(target);
   filterResults(target);
 };
