@@ -110,7 +110,7 @@ const removeActiveClass = () => {
 
 document.querySelector('body').addEventListener('click', removeActiveClass);
 
-//Selecting option from dropdown
+//Selecting and setting option from dropdown
 optionsContainer.forEach(container => {
   container.addEventListener('click', e => {
     e.preventDefault();
@@ -118,46 +118,39 @@ optionsContainer.forEach(container => {
     let targetAttribute;
     let inputField;
 
+    if (!e.target.classList.contains('option')) return false;
+
     if (e.target.classList.contains('option')) {
       target = e.target;
-      console.log(target);
       targetAttribute = e.target.getAttribute('name');
       inputField = document.querySelector(`.input[name="${targetAttribute}"]`);
       inputField.value = target.textContent;
+      console.log(targetAttribute);
+      initFiltering(targetAttribute);
     }
   });
 });
 
-//Removing class active from all elements
-// const optionsContainer = document.querySelectorAll('.options-container');
+//Filtering in DOM and displaying results
+const filterResults = labelName => {
+  // const labels = document.querySelectorAll(`.${labelName}-label`);
+  const propertiesDOM = document.querySelectorAll('.open-property-page-btn');
 
-/////////////////////////DONE IN THE TESTING STAGE
-// Filter bar - testing logic
-// const input = document.querySelector(".input");
-// const options = document.querySelectorAll(".option");
-// const optionsContainer = document.querySelector(".options-container");
-// const countryLabels = document.querySelectorAll(".country-label");
-// const countryLabelsWrapper = document.querySelector(".country-labels-wrapper");
+  let input = document.querySelector(`.input[name="${labelName}`);
 
-// optionsContainer.addEventListener("click", (e) => {
-//   e.preventDefault();
-//   if (e.target.classList.contains("option")) {
-//     let target = e.target;
-//     input.value = target.textContent;
-//     console.log(input.value);
-//     filterResults(countryLabels);
-//   }
+  propertiesDOM.forEach(prop => {
+    console.log(prop.innerText);
+    if (prop.innerText.indexOf(input.value) !== -1) {
+      prop.style.display = '';
+    } else {
+      prop.style.display = 'none';
+    }
+  });
+};
 
-//   if (!e.target.classList.contains("option")) return false;
-// });
-
-// //filtering
-// const filterResults = (elements, input) => {
-//   elements.forEach((el) => {
-//     if (el.textContent.indexOf(input.value) !== -1) {
-//       el.style.display = "inline";
-//     } else {
-//       el.style.display = "none";
-//     }
-//   });
-// };
+const initFiltering = target => {
+  filterResults(target);
+  filterResults(target);
+  filterResults(target);
+  filterResults(target);
+};
