@@ -86,7 +86,7 @@ const transparentOverlay = document.querySelector(
 );
 
 formsWrapper.addEventListener('click', e => {
-  removeActiveClass();
+  e.stopPropagation();
   let target;
 
   if (!e.target.classList.contains('input')) return false;
@@ -101,14 +101,20 @@ formsWrapper.addEventListener('click', e => {
   }
 });
 
-//Removing class active from all elements
+//Removing all active classes on header container click
+const homeHeader = document.querySelector('.home-header');
 const optionsContainer = document.querySelectorAll('.options-container');
 
 const removeActiveClass = () => {
-  optionsContainer.forEach(container => {
+  optionsContainer.forEach((container, i) => {
     container.classList.remove('options-container-active');
   });
 };
+
+homeHeader.addEventListener('click', removeActiveClass);
+
+//Removing class active from all elements
+// const optionsContainer = document.querySelectorAll('.options-container');
 
 /////////////////////////DONE IN THE TESTING STAGE
 // Filter bar - testing logic

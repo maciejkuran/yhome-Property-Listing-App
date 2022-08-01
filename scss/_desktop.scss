@@ -43,6 +43,7 @@
 
 .home-header {
   margin-top: 8rem;
+  padding-bottom: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -139,7 +140,6 @@
 }
 
 .properties-container {
-  margin-top: 5rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 3rem;
@@ -356,9 +356,4 @@
   left: 0;
   background-color: rgba(0, 0, 0, 0.636);
   z-index: 5;
-}
-
-.transparent-background-overlay {
-  @extend .dark-background-overlay;
-  background-color: rgba(255, 255, 255, 0);
 }
