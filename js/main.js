@@ -160,13 +160,29 @@ const filterResults = input => {
     }
   });
   initOptions();
-  console.log(countriesArr);
-  console.log(citiesArr);
-  console.log(typesArr);
-  console.log(statusesArr);
 };
 
 const removeAllOptions = () => {
   const options = document.querySelectorAll('.option');
   options.forEach(option => option.remove());
 };
+
+//Resetting filter bar
+const resetBtn = document.querySelector('.reset-btn');
+const inputs = document.querySelectorAll('.input');
+
+resetBtn.addEventListener('click', () => {
+  const propertiesDOM = document.querySelectorAll('.open-property-page-btn');
+
+  propertiesDOM.forEach(property => property.remove());
+  countriesArr = [];
+  citiesArr = [];
+  typesArr = [];
+  statusesArr = [];
+  removeAllOptions();
+  displayProperties();
+  initOptions();
+  inputs.forEach(input => (input.value = ''));
+});
+
+//FIXME: Tworzy się duplikat nieruchomości po kliknięciu w Reset Btn. NAPRAWIĆ !!!
