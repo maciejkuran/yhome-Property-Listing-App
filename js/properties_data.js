@@ -21,7 +21,7 @@ export const Property = class {
     const dollarOptions = { style: 'currency', currency: 'USD' };
     const euroOptions = { style: 'currency', currency: 'EUR' };
     const eurToUSD = this.price * 1.02; //rate conversion 31.07.2022;
-    //If user is from Europe = EUR, if not = display $;
+    //If user is from Europe = EUR, if not = display price in $;
     if (timeZone.includes('Europe')) {
       return new Intl.NumberFormat(locale, euroOptions).format(this.price);
     } else {
