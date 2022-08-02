@@ -18,7 +18,11 @@ Creator: Maciej Kuran-Janowski
 <p align="center"><img width="1000" src="/img/yhome-mockup-pc-photo.png"></p>
 
 
-https://user-images.githubusercontent.com/103118542/182461697-6eedce8e-1de6-4545-9209-5b770ba31ff5.mp4
+
+
+https://user-images.githubusercontent.com/103118542/182461999-25757f2e-299d-4309-83d1-f48e56b9e6ab.mp4
+
+
 
 
 
