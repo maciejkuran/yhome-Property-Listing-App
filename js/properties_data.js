@@ -83,6 +83,24 @@ const property_portugal_5 = new Property(
   900000,
   '/img/property-portugal-5.jpg'
 );
+const property_portugal_6 = new Property(
+  'For Sale',
+  'House',
+  'Portugal',
+  'Lisbon',
+  250,
+  1300000,
+  '/img/property-portugal-6.jpg'
+);
+const property_portugal_7 = new Property(
+  'For Sale',
+  'House',
+  'Portugal',
+  'Porto',
+  180,
+  925000,
+  '/img/property-portugal-7.jpg'
+);
 
 ////Portugal - Property
 const property_spain_1 = new Property(
@@ -139,6 +157,15 @@ const property_spain_6 = new Property(
   1800000,
   '/img/property-spain-6.jpg'
 );
+const property_spain_7 = new Property(
+  'For Sale',
+  'House',
+  'Spain',
+  'Barcelona',
+  200,
+  920000,
+  '/img/property-spain-7.jpg'
+);
 
 ////Italy - Property
 const property_italy_1 = new Property(
@@ -176,6 +203,33 @@ const property_italy_4 = new Property(
   130,
   800000,
   '/img/property-italy-4.jpg'
+);
+const property_italy_5 = new Property(
+  'For Sale',
+  'Condo',
+  'Italy',
+  'Bologna',
+  55,
+  235000,
+  '/img/property-italy-5.jpg'
+);
+const property_italy_6 = new Property(
+  'For Sale',
+  'House',
+  'Italy',
+  'Rome',
+  150,
+  950000,
+  '/img/property-italy-6.jpg'
+);
+const property_italy_7 = new Property(
+  'For Sale',
+  'House',
+  'Italy',
+  'Rome',
+  410,
+  1500000,
+  '/img/property-italy-7.jpg'
 );
 
 ////Poland - Property
