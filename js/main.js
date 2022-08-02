@@ -101,18 +101,17 @@ const formsWrapper = document.querySelector('.forms-wrapper');
 
 formsWrapper.addEventListener('click', e => {
   e.stopPropagation();
-  let target;
 
   if (!e.target.classList.contains('input')) return false;
 
   if (e.target.classList.contains('input')) {
-    target = e.target.getAttribute('name');
-    const optionsContainer = document.querySelector(
-      `.options-container[name="${target}"]`
+    let targetAttribute = e.target.getAttribute('name');
+
+    let optionsContainer = document.querySelector(
+      `.options-container[name="${targetAttribute}"]`
     );
 
-    optionsContainer.classList.toggle('options-container-active');
-  }
+   optionsContainer.classList.toggle('options-container-active');
 });
 
 //Removing all active classes on <body> click
