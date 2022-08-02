@@ -269,3 +269,32 @@ const property_poland_4 = new Property(
   900,
   '/img/property-poland-4.jpg'
 );
+
+const property_poland_5 = new Property(
+  'For Rent',
+  'House',
+  'Poland',
+  'Warsaw',
+  200,
+  4000,
+  '/img/property-poland-5.jpg'
+);
+const property_poland_6 = new Property(
+  'For Rent',
+  'Condo',
+  'Poland',
+  'Warsaw',
+  110,
+  2000,
+  '/img/property-poland-6.jpg'
+);
+
+const property_poland_7 = new Property(
+  'For Sale',
+  'Condo',
+  'Poland',
+  'Warsaw',
+  80,
+  275000,
+  '/img/property-poland-7.jpg'
+);
