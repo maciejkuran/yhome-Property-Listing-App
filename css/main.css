@@ -140,6 +140,10 @@ input[type=checkbox] {
   text-align: center;
 }
 
+.my-acc-btn {
+  color: var(--color-black);
+}
+
 .forms-wrapper {
   max-width: 80rem;
   background-color: var(--color-white);
@@ -166,10 +170,35 @@ input[type=checkbox] {
   font-size: 1.8rem;
   background-color: var(--color-light-grey);
   padding: 1rem;
-  color: var(--color-dark-grey);
+  color: var(--color-black);
   position: relative;
   padding-left: 2rem;
   margin: 0.3rem 1.5rem 0.3rem 0;
+}
+
+.input::-webkit-input-placeholder {
+  color: var(--color-black);
+  font-weight: 600;
+}
+
+.input::-moz-placeholder {
+  color: var(--color-black);
+  font-weight: 600;
+}
+
+.input:-ms-input-placeholder {
+  color: var(--color-black);
+  font-weight: 600;
+}
+
+.input::-ms-input-placeholder {
+  color: var(--color-black);
+  font-weight: 600;
+}
+
+.input::placeholder {
+  color: var(--color-black);
+  font-weight: 600;
 }
 
 .input:hover {
@@ -234,6 +263,10 @@ input[type=checkbox] {
           align-items: center;
 }
 
+.reset-btn {
+  color: var(--color-black);
+  font-weight: 600;
+}
 .reset-btn i {
   margin-right: 0.2rem;
   font-size: 1.1rem;
@@ -449,6 +482,7 @@ input[type=checkbox] {
       -ms-flex-pack: end;
           justify-content: flex-end;
   margin-top: 1rem;
+  color: var(--color-black);
 }
 
 .register-label {
@@ -468,6 +502,7 @@ input[type=checkbox] {
   right: 1%;
   top: 1%;
   font-size: 2.5rem;
+  color: var(--color-black);
 }
 
 .close-popup:hover {

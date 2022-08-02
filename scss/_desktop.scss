@@ -52,6 +52,10 @@
   }
 }
 
+.my-acc-btn {
+  color: var(--color-black);
+}
+
 //Filter bar styles
 .forms-wrapper {
   max-width: 80rem;
@@ -73,10 +77,15 @@
   font-size: 1.8rem;
   background-color: var(--color-light-grey);
   padding: 1rem;
-  color: var(--color-dark-grey);
+  color: var(--color-black);
   position: relative;
   padding-left: 2rem;
   margin: 0.3rem 1.5rem 0.3rem 0;
+}
+
+.input::placeholder {
+  color: var(--color-black);
+  font-weight: 600;
 }
 
 .input:hover {
@@ -128,6 +137,8 @@
 }
 
 .reset-btn {
+  color: var(--color-black);
+  font-weight: 600;
   i {
     margin-right: 0.2rem;
     font-size: 1.1rem;
@@ -311,6 +322,7 @@
   display: flex;
   justify-content: flex-end;
   margin-top: 1rem;
+  color: var(--color-black);
 }
 
 .register-label {
@@ -331,6 +343,7 @@
   right: 1%;
   top: 1%;
   font-size: 2.5rem;
+  color: var(--color-black);
 }
 
 .close-popup:hover {
