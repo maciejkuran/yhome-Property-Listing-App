@@ -128,6 +128,7 @@ document.querySelector('body').addEventListener('click', removeActiveClass);
 //Selecting and setting option from dropdown
 optionsContainer.forEach(container => {
   container.addEventListener('click', e => {
+    blurInput();
     removeAllOptions();
     e.preventDefault();
     let target;
@@ -169,6 +170,11 @@ const removeAllOptions = () => {
 //Resetting filter bar
 const resetBtn = document.querySelector('.reset-btn');
 const inputs = document.querySelectorAll('.input');
+
+//Blurring input fields
+const blurInput = () => {
+  inputs.forEach(input => input.blur());
+};
 
 resetBtn.addEventListener('click', () => {
   const propertiesDOM = document.querySelectorAll('.open-property-page-btn');
