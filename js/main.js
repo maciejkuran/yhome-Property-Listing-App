@@ -10,7 +10,7 @@ const displayProperties = () => {
   allProperties.forEach(property => {
     const aTag = document.createElement('a');
     aTag.classList.add('open-property-page-btn');
-    aTag.href = '#';
+    aTag.href = '';
     aTag.innerHTML = `<div class="property">
   <picture class="property-img">
     <img class="img-label" src="${property.listingImg}" alt="" />
@@ -46,7 +46,6 @@ displayProperties();
 /////FILTERING RESULTS
 
 //Retreiving programatically unique label values from DOM and saving in arrays
-
 const uniqueValues = labels => {
   const arr = [];
   for (const label of labels) {
@@ -111,7 +110,8 @@ formsWrapper.addEventListener('click', e => {
       `.options-container[name="${targetAttribute}"]`
     );
 
-   optionsContainer.classList.toggle('options-container-active');
+    optionsContainer.classList.toggle('options-container-active');
+  }
 });
 
 //Removing all active classes on <body> click
@@ -183,3 +183,99 @@ resetBtn.addEventListener('click', () => {
   initOptions();
   inputs.forEach(input => (input.value = ''));
 });
+
+//////NAVBAR
+////Hiding navbar on scroll down and show when scroll up
+const navbar = document.querySelector('.navbar');
+const mediaQuery = window.matchMedia('(max-width: 705.98px)');
+
+let prevPosition;
+
+const hideNavbar = () => {
+  window.addEventListener('scroll', () => {
+    let curPosition = window.pageYOffset;
+
+    if (curPosition < prevPosition) {
+      navbar.style.top = '0px';
+      navbar.style.backgroundColor = ' #f6f6f6de';
+    } else {
+      navbar.style.top = '-120px';
+    }
+
+    if (curPosition < 20) navbar.style.backgroundColor = '';
+
+    if (mediaQuery.matches && curPosition < 20) navbar.style.top = '0px';
+
+    prevPosition = curPosition;
+  });
+};
+hideNavbar();
+
+//////lOGIN/REGISTER FORMS
+//Displaying login/register form function
+const loginContainer = document.querySelector('.login-register-form-container');
+const registerContainer = document.querySelector('.register-container');
+const registerBtn = document.querySelector('.register-now-btn');
+const closeBtns = document.querySelectorAll('.close-popup');
+const backgroundOverlay = document.querySelector('.dark-background-overlay');
+
+//Closing popups on button cllick
+const closeOnBtnClick = container => {
+  closeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (!container.classList.contains('hide')) {
+        container.classList.add('hide');
+        backgroundOverlay.classList.add('hide');
+      }
+    });
+  });
+};
+
+closeOnBtnClick(loginContainer);
+closeOnBtnClick(registerContainer);
+
+//Displaying login form
+//multi btns with the same class
+const contactAgentBtns = document.querySelectorAll('.contact-agent-btn');
+const addToFavBtns = document.querySelectorAll('.add-to-favorites-btn');
+const properties = document.querySelectorAll('.open-property-page-btn');
+
+const displayForm = btns => {
+  btns.forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      loginContainer.classList.remove('hide');
+      backgroundOverlay.classList.remove('hide');
+    });
+  });
+};
+
+displayForm(contactAgentBtns);
+displayForm(addToFavBtns);
+displayForm(properties);
+
+//single btns
+const myAccBtn = document.querySelector('.my-acc-btn');
+const myFavBtns = document.querySelector('.my-favorites-btn');
+
+const displayFormSingleBtn = btn => {
+  btn.addEventListener('click', () => {
+    loginContainer.classList.remove('hide');
+    backgroundOverlay.classList.remove('hide');
+  });
+};
+
+displayFormSingleBtn(myAccBtn);
+displayFormSingleBtn(myFavBtns);
+
+//Closing forms on background overlay click
+const popups = document.querySelectorAll('.popup');
+
+backgroundOverlay.addEventListener('click', e => {
+  popups.forEach(popup => {
+    popup.classList.add('hide');
+    backgroundOverlay.classList.add('hide');
+  });
+});
+
+//Switching between login and register form

@@ -81,7 +81,8 @@ input[type=checkbox] {
   top: 0;
   left: 0;
   z-index: 5;
-  background-color: rgba(246, 246, 246, 0.8705882353);
+  -webkit-transition: top 0.5s;
+  transition: top 0.5s;
 }
 
 .navbar-wrapper {
@@ -459,6 +460,7 @@ input[type=checkbox] {
 
 .demo-info-label {
   font-size: 1.1rem;
+  margin-top: 0.5rem;
 }
 
 .close-popup {
@@ -481,6 +483,7 @@ input[type=checkbox] {
 .country-and-city-labels span,
 .map-pin-icon {
   font-size: 1.8rem;
+  font-weight: 700;
 }
 
 .highlight {
