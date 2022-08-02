@@ -659,8 +659,8 @@ p {
     padding: 0.7rem;
   }
   .ri-arrow-down-s-line:before {
-    -webkit-transform: translate(-3rem, 1.6rem);
-            transform: translate(-3rem, 1.6rem);
+    -webkit-transform: translate(-3.5rem, 1.6rem);
+            transform: translate(-3.5rem, 1.6rem);
   }
   .country-and-city-labels span,
 .map-pin-icon {
