@@ -10,7 +10,7 @@ Because I love creative tasks, creating new brand concepts right next to solving
 
 It was a great experience and I am happy to have it accomplished. Massive thanks to `unsplash.com` for an amazing interior design photos!
 
-Live app ❤ https://yhome.maciejkuran.com/
+Live app ❤ yhome.maciejkuran.com/
 
 
 Creator: Maciej Kuran-Janowski
