@@ -174,6 +174,9 @@ resetBtn.addEventListener('click', () => {
   const propertiesDOM = document.querySelectorAll('.open-property-page-btn');
 
   propertiesDOM.forEach(property => property.remove());
+  optionsContainer.forEach(cont =>
+    cont.classList.remove('options-container-active')
+  );
   countriesArr = [];
   citiesArr = [];
   typesArr = [];
