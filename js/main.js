@@ -215,7 +215,6 @@ hideNavbar();
 //Displaying login/register form function
 const loginContainer = document.querySelector('.login-register-form-container');
 const registerContainer = document.querySelector('.register-container');
-const registerBtn = document.querySelector('.register-now-btn');
 const closeBtns = document.querySelectorAll('.close-popup');
 const backgroundOverlay = document.querySelector('.dark-background-overlay');
 
@@ -279,3 +278,10 @@ backgroundOverlay.addEventListener('click', e => {
 });
 
 //Switching between login and register form
+const registerBtn = document.querySelector('.register-now-btn');
+
+registerBtn.addEventListener('click', e => {
+  e.preventDefault();
+  loginContainer.classList.add('hide');
+  registerContainer.classList.remove('hide');
+});
