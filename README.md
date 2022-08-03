@@ -4,11 +4,12 @@
 
 # Home is Where Your Heart Beats
 
-yhome is a 'fake' brand that I designed and created for learning purposes. This project features `OOP paradigm in JavaScript.`The properties data is fetched from a `class constructor`, as well as filter options, that get updated automatically. The general concept of this exercise was to do everything programmatically, minimizing hard coding to zero.
+This project features `OOP paradigm in JavaScript.`The properties data is fetched from a `class constructor`, as well as filter options, that get updated automatically everytime we add a new property to the listing. The general concept of this exercise was to do everything programmatically, minimizing hard coding to zero. I also added an extra feature such as displaying different currency depending on the user's time zone - `new Intl.DateTimeFormat().resolvedOptions()`. Feel free to dive deeper into my source code!
 
-Because I love creative tasks, creating new brand concepts right next to solving programming problems is always exciting.
 
-It was a great experience and I am happy to have it accomplished. Massive thanks to `unsplash.com` for an amazing interior design photos!
+yhome is a 'fake' brand that I designed and created for learning purposes. Because I love creative tasks, creating new brand concepts right next to solving programming problems is always exciting.
+
+It was a great experience, and I am happy to have it accomplished. Massive thanks to `unsplash.com` for amazing interior design photos!
 
 Live app ❤ www.yhome.maciejkuran.com
 
