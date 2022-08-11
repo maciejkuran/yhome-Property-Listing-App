@@ -57,7 +57,7 @@
 }
 
 //Filter bar styles
-.forms-wrapper {
+.select-wrapper {
   max-width: 80rem;
   background-color: var(--color-white);
   border-radius: 15px;
@@ -67,41 +67,23 @@
   align-items: center;
 }
 
-.input {
-  caret-color: transparent;
-  cursor: pointer;
-  outline: none;
-  border: none;
-  max-width: 14rem;
+.btn {
+  margin-right: 1rem;
+  background-color: var(--color-light-grey);
+  padding: 1rem 2rem;
+  font-weight: 600;
   border-radius: 15px;
   font-size: 1.8rem;
-  background-color: var(--color-light-grey);
-  padding: 1rem;
-  color: var(--color-black);
-  position: relative;
-  padding-left: 2rem;
-  margin: 0.3rem 1.5rem 0.3rem 0;
+
+  i {
+    font-size: 1.2rem;
+    color: var(--color-dark-grey);
+  }
 }
 
-.input::placeholder {
-  color: var(--color-black);
-  font-weight: 600;
-}
-
-.input:hover {
+.btn:hover {
   background-color: var(--color-middle-grey);
   transition: 500ms;
-}
-
-.ri-arrow-down-s-line:before {
-  content: '\ea4e';
-  position: absolute;
-  transform: translate(-4rem, 2rem);
-  font-size: 1.5rem;
-}
-
-.no-pointer-event {
-  pointer-events: none;
 }
 
 .options-container {

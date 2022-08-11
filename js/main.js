@@ -95,15 +95,15 @@ const initOptions = () => {
 
 initOptions();
 
-//Toggling options container on input click
-const formsWrapper = document.querySelector('.forms-wrapper');
+//Toggling options container on select click
+const formsWrapper = document.querySelector('.select-wrapper');
 
 formsWrapper.addEventListener('click', e => {
   e.stopPropagation();
 
-  if (!e.target.classList.contains('input')) return false;
+  if (!e.target.classList.contains('btn')) return false;
 
-  if (e.target.classList.contains('input')) {
+  if (e.target.classList.contains('btn')) {
     let targetAttribute = e.target.getAttribute('name');
 
     let optionsContainer = document.querySelector(
@@ -133,16 +133,17 @@ optionsContainer.forEach(container => {
     e.preventDefault();
     let target;
     let targetAttribute;
-    let inputField;
+    let selectBtn;
 
     if (!e.target.classList.contains('option')) return false;
 
     if (e.target.classList.contains('option')) {
       target = e.target;
       targetAttribute = e.target.getAttribute('name');
-      inputField = document.querySelector(`.input[name="${targetAttribute}"]`);
-      inputField.value = target.textContent;
-      filterResults(inputField.value);
+      selectBtn = document.querySelector(`.btn[name="${targetAttribute}"]`);
+      selectBtn.textContent = target.textContent;
+      selectBtn.style.color = '#e60d60';
+      filterResults(selectBtn.textContent);
       removeActiveClass();
     }
   });
@@ -169,11 +170,11 @@ const removeAllOptions = () => {
 
 //Resetting filter bar
 const resetBtn = document.querySelector('.reset-btn');
-const inputs = document.querySelectorAll('.input');
+const selectBtns = document.querySelectorAll('.btn');
 
-//Blurring input fields
+//Blurring select btns
 const blurInput = () => {
-  inputs.forEach(input => input.blur());
+  selectBtns.forEach(btn => btn.blur());
 };
 
 resetBtn.addEventListener('click', () => {
@@ -190,7 +191,16 @@ resetBtn.addEventListener('click', () => {
   removeAllOptions();
   displayProperties();
   initOptions();
-  inputs.forEach(input => (input.value = ''));
+  selectBtns.forEach(btn => {
+    const attribute = btn.getAttribute('name');
+    btn.textContent = attribute[0].toUpperCase() + attribute.slice(1);
+    btn.style.color = 'black';
+
+    const icon = document.createElement('i');
+    icon.classList.add('ri-arrow-down-s-line');
+    icon.style.marginLeft = '0.5rem';
+    btn.append(icon);
+  });
 });
 
 //////NAVBAR

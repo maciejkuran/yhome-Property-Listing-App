@@ -48,8 +48,7 @@
   }
 
   li,
-  p,
-  .input {
+  p {
     font-size: 1.6rem;
   }
 
@@ -69,8 +68,12 @@
     }
   }
 
-  .forms-wrapper {
+  .select-wrapper {
     flex-wrap: wrap;
+  }
+
+  .btn {
+    font-size: 1.6rem;
   }
 
   .country-and-city-labels span,
@@ -132,6 +135,10 @@
   .home-header {
     margin-bottom: 1rem;
   }
+
+  .btn {
+    margin-bottom: 0.5rem;
+  }
 }
 
 @media (max-width: 431.98px) {
@@ -192,6 +199,15 @@
   .country-and-city-labels span,
   .map-pin-icon {
     font-size: 1.2rem;
+  }
+
+  .btn {
+    font-size: 1.4rem;
+    padding: 1rem 1rem;
+
+    i {
+      font-size: 1rem;
+    }
   }
 }
 

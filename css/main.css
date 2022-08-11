@@ -144,7 +144,7 @@ input[type=checkbox] {
   color: var(--color-black);
 }
 
-.forms-wrapper {
+.select-wrapper {
   max-width: 80rem;
   background-color: var(--color-white);
   border-radius: 15px;
@@ -160,63 +160,23 @@ input[type=checkbox] {
           align-items: center;
 }
 
-.input {
-  caret-color: transparent;
-  cursor: pointer;
-  outline: none;
-  border: none;
-  max-width: 14rem;
+.btn {
+  margin-right: 1rem;
+  background-color: var(--color-light-grey);
+  padding: 1rem 2rem;
+  font-weight: 600;
   border-radius: 15px;
   font-size: 1.8rem;
-  background-color: var(--color-light-grey);
-  padding: 1rem;
-  color: var(--color-black);
-  position: relative;
-  padding-left: 2rem;
-  margin: 0.3rem 1.5rem 0.3rem 0;
+}
+.btn i {
+  font-size: 1.2rem;
+  color: var(--color-dark-grey);
 }
 
-.input::-webkit-input-placeholder {
-  color: var(--color-black);
-  font-weight: 600;
-}
-
-.input::-moz-placeholder {
-  color: var(--color-black);
-  font-weight: 600;
-}
-
-.input:-ms-input-placeholder {
-  color: var(--color-black);
-  font-weight: 600;
-}
-
-.input::-ms-input-placeholder {
-  color: var(--color-black);
-  font-weight: 600;
-}
-
-.input::placeholder {
-  color: var(--color-black);
-  font-weight: 600;
-}
-
-.input:hover {
+.btn:hover {
   background-color: var(--color-middle-grey);
   -webkit-transition: 500ms;
   transition: 500ms;
-}
-
-.ri-arrow-down-s-line:before {
-  content: "\ea4e";
-  position: absolute;
-  -webkit-transform: translate(-4rem, 2rem);
-          transform: translate(-4rem, 2rem);
-  font-size: 1.5rem;
-}
-
-.no-pointer-event {
-  pointer-events: none;
 }
 
 .options-container {
@@ -578,8 +538,7 @@ h3 {
     font-size: 2.5rem;
   }
   li,
-p,
-.input {
+p {
     font-size: 1.6rem;
   }
   .status-label {
@@ -591,9 +550,12 @@ p,
   .action-buttons button {
     font-size: 2rem;
   }
-  .forms-wrapper {
+  .select-wrapper {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+  .btn {
+    font-size: 1.6rem;
   }
   .country-and-city-labels span,
 .map-pin-icon {
@@ -635,6 +597,9 @@ p,
   }
   .home-header {
     margin-bottom: 1rem;
+  }
+  .btn {
+    margin-bottom: 0.5rem;
   }
 }
 @media (max-width: 431.98px) {
@@ -683,6 +648,13 @@ p {
   .country-and-city-labels span,
 .map-pin-icon {
     font-size: 1.2rem;
+  }
+  .btn {
+    font-size: 1.4rem;
+    padding: 1rem 1rem;
+  }
+  .btn i {
+    font-size: 1rem;
   }
 }
 @media (max-width: 353.98px) {
