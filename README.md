@@ -7,7 +7,7 @@
 This project is my first experience with `OOP paradigm in JavaScript.`The properties data is fetched from a `class constructor`, as well as filter options, that get updated automatically everytime we add a new property to the listing. The general concept of this exercise was to do everything programmatically, minimizing hard coding to zero. I also added an extra feature such as displaying different currency depending on the user's time zone - `new Intl.DateTimeFormat().resolvedOptions()`. Feel free to dive deeper into my source code!
 
 
-yhome is a 'fake' brand that I designed and created for learning purposes. Because I love creative tasks, creating new brand concepts right next to solving programming problems is always exciting.
+<b>yhome is a 'fake' brand that I designed and created for learning purposes</b>. Because I love creative tasks, creating new brand concepts right next to solving programming problems is always exciting.
 
 It was a great experience, and I am happy to have it accomplished. Massive thanks to `unsplash.com` for amazing interior design photos!
 
